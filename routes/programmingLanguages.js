@@ -11,5 +11,14 @@ router.get('/', async function(req, res, next) {
     next(err);
   }
 });
+/* POST programming language */
+router.post('/', async function(req, res, next) {
+  try {
+    res.json(await programmingLanguages.create(req.body));
+  } catch (err) {
+    console.error(`Error while creating programming language`, err.message);
+    next(err);
+  }
+});
 
 module.exports = router;

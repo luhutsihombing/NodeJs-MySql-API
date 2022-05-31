@@ -5,8 +5,7 @@ const config = require('../config');
 async function getMultiple(page = 1){
   const offset = helper.getOffset(page, config.listPerPage);
   const rows = await db.query(
-    `SELECT id, name, released_year, githut_rank, pypl_rank, tiobe_rank 
-    FROM programming_languages LIMIT ${offset},${config.listPerPage}`
+    `SELECT * FROM u280636814_nexelit.admins LIMIT ${offset},${config.listPerPage}`
   );
   const data = helper.emptyOrRows(rows);
   const meta = {page};
@@ -17,6 +16,24 @@ async function getMultiple(page = 1){
   }
 }
 
+async function create(programmingLanguage){
+  const result = await db.query(
+    `INSERT INTO brands (id, title, url, image, created_at, updated_at) VALUES 
+    (15, "", " ", " ", " ", " ")`
+  );
+  const data = result.affectedRows;
+  const meta = programmingLanguage;
+  const SQLAll = result;
+
+  return {
+    data,
+    meta,
+    SQLAll
+  }
+  
+}
+
 module.exports = {
-  getMultiple
+  getMultiple,
+  create
 }
