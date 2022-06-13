@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const port = 3300;
+const path = require('path');
 const programmingLanguagesRouter = require("./routes/programmingLanguages");
 app.use(express.json());
 app.use(
@@ -14,7 +15,8 @@ var corsOptions = {
 };
 app.use(cors(corsOptions));
 app.get("/", (req, res) => {
-  res.json({ message: "ok" });
+  //res.json({ message: "ok" });
+  res.sendFile(path.join(__dirname+'/home.html'));
 });
 app.get("/testing", (req, res) => {
   res.json({ message: "only Testing" });
