@@ -20,6 +20,10 @@ app.get("/testing", (req, res) => {
   res.json({ message: "only Testing" });
 });
 app.use("/programming-languages", programmingLanguagesRouter);
+require("./app/routes/auth.routes")(app);
+require("./app/routes/authenticated.routes")(app);
+require("./app/routes/crud.routes")(app);
+require("./app/routes/file.routes")(app);
 /* Error handler middleware */
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
