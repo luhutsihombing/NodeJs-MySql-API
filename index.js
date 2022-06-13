@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const port = 3300;
 const programmingLanguagesRouter = require("./routes/programmingLanguages");
 app.use(express.json());
@@ -16,7 +17,7 @@ app.get("/", (req, res) => {
   res.json({ message: "ok" });
 });
 app.get("/testing", (req, res) => {
-  res.json({ message: "Testing" });
+  res.json({ message: "only Testing" });
 });
 app.use("/programming-languages", programmingLanguagesRouter);
 /* Error handler middleware */
