@@ -11,6 +11,9 @@ app.use(
 app.get("/", (req, res) => {
   res.json({ message: "ok" });
 });
+app.get("/testing", (req, res) => {
+  res.json({ message: "Testing" });
+});
 app.use("/programming-languages", programmingLanguagesRouter);
 /* Error handler middleware */
 app.use((err, req, res, next) => {
