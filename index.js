@@ -8,6 +8,10 @@ app.use(
     extended: true,
   })
 );
+var corsOptions = {
+  origin: "*",
+};
+app.use(cors(corsOptions));
 app.get("/", (req, res) => {
   res.json({ message: "ok" });
 });
