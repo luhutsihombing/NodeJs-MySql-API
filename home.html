@@ -21,7 +21,115 @@
         <h2 class="section-heading">
             The following table shows overview of the Rest APIs :
         </h2>
-        <div class="table-responsive"><table class="table table-hover  table table-hover table table-hover" width="100%"><thead><tr><th>Methods</th><th>Urls</th><th>Actions</th></tr></thead><tbody><tr><td>GET</td><td>api/tutorials</td><td>get all Tutorials</td></tr><tr><td>GET</td><td>api/tutorials/:id</td><td>get Tutorial by <code>id</code></td></tr><tr><td>POST</td><td>api/tutorials</td><td>add new Tutorial</td></tr><tr><td>PUT</td><td>api/tutorials/:id</td><td>update Tutorial by <code>id</code></td></tr><tr><td>DELETE</td><td>api/tutorials/:id</td><td>remove Tutorial by <code>id</code></td></tr><tr><td>DELETE</td><td>api/tutorials</td><td>remove all Tutorials</td></tr><tr><td>GET</td><td>api/tutorials/published</td><td>find all published Tutorials</td></tr><tr><td>GET</td><td>api/tutorials?title=[kw]</td><td>find all Tutorials which title contains <code>'kw'</code></td></tr></tbody></table></div>
+        <div class="table-responsive">
+            <table class="table table-hover  table table-hover table table-hover" width="100%">
+                <thead><tr><th>Methods</th><th>Urls</th><th>Actions</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>POST</td>
+                        <td><a href="https://node-js-my-sql-api.vercel.app/auth/register/admin" target="_blank">
+                            auth/register/admin</a>
+                        </td>
+                        <td>Create Account</td>
+                    </tr>
+                    <tr>
+                        <td>POST</td>
+                        <td>
+                            <a href="https://node-js-my-sql-api.vercel.app/auth/admin" target="_blank">
+                                auth/admin
+                            </a>
+                        </td>
+                        <td>Login Account</td>
+                    </tr>
+                    <tr>
+                        <td>POST</td>
+                        <td>
+                            <a href="https://node-js-my-sql-api.vercel.app/auth/refresh-token/admin" target="_blank">
+                                auth/refresh-token/admin
+                            </a>
+                        </td>
+                        <td>Access Token By Refresh Token</td>
+                    </tr>
+                    <tr>
+                        <td>PUT</td>
+                        <td>
+                            <a href="https://node-js-my-sql-api.vercel.app/authenticated/admin/password" target="_blank">
+                                authenticated/admin/password
+                            </a>
+                        </td>
+                        <td>Update password</td>
+                    </tr>
+                    <tr>
+                        <td>POST</td>
+                        <td>
+                            <a href="https://node-js-my-sql-api.vercel.app/crud/product" target="_blank">
+                                crud/product
+                            </a>
+                        </td>
+                        <td>Create product</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td>
+                            <a href="https://node-js-my-sql-api.vercel.app/crud/product/?offset=1&limit=10" target="_blank">
+                                crud/product/?offset=1&limit=10
+                            </a>
+                        </td>
+                        <td>GET all products</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td>
+                            <a href="https://node-js-my-sql-api.vercel.app/crud/admin/?offset=1&limit=10" target="_blank">
+                                crud/admin/?offset=1&limit=10
+                            </a>
+                        </td>
+                        <td>GET all Users</td>
+                    </tr>
+                    <tr>
+                        <td>PUT</td>
+                        <td>
+                            <a href="https://node-js-my-sql-api.vercel.app/crud/product/45" target="_blank">
+                                crud/product/:id
+                            </a>
+                        </td>
+                        <td>Update product By ID</td>
+                    </tr>
+
+                    <tr>
+                        <td>GET</td>
+                        <td>
+                            <a href="https://node-js-my-sql-api.vercel.app/crud/product/45" target="_blank">
+                                crud/product/:id
+                            </a>
+                        </td>
+                        <td>Get detail product By ID</td>
+                    </tr>
+
+                    <tr>
+                        <td>DELETE</td>
+                        <td>
+                            <a href="https://node-js-my-sql-api.vercel.app/crud/product/45" target="_blank">
+                                crud/product/:id
+                            </a>
+                        </td>
+                        <td>Delete product By ID</td>
+                    </tr>
+
+                    <tr>
+                        <td>POST</td>
+                        <td>
+                            <a href="https://node-js-my-sql-api.vercel.app/file/photo" target="_blank">
+                                file/photo
+                            </a>
+                        </td>
+                        <td>File Upload</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
       </section>
   </div>
 
